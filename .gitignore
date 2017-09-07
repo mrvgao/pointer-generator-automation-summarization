@@ -4,3 +4,4 @@ bin_data/*
 .idea/*
 __pycache__/*
 tmp/*
+pretrained_model/*
