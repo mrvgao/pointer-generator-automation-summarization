@@ -1,0 +1,6 @@
+bin_data/chunked bin_data/test.bin bin_data/train.bin bin_data/val.bin bin_data/vocab
+bin_data/*
+.idea
+.idea/*
+__pycache__/*
+tmp/*
