@@ -5,3 +5,4 @@ bin_data/*
 __pycache__/*
 tmp/*
 pretrained_model/*
+log/*
