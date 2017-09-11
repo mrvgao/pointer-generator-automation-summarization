@@ -110,6 +110,8 @@ class BeamSearchDecoder(object):
                 decoded_words = decoded_words[:fst_stop_idx]
             except ValueError:
                 decoded_words = decoded_words
+
+            print(decoded_words)
             decoded_output = ' '.join(decoded_words)  # single string
 
             if FLAGS.single_pass:
