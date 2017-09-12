@@ -48,11 +48,15 @@ tf.app.flags.DEFINE_string('exp_name', '',
                            'Name for experiment. Logs will be saved in a directory with this name, under log_root.')
 
 # Hyperparameters
-tf.app.flags.DEFINE_integer('hidden_dim', 256, 'dimension of RNN hidden states')
-tf.app.flags.DEFINE_integer('emb_dim', 128, 'dimension of word embeddings')
+# tf.app.flags.DEFINE_integer('hidden_dim', 256, 'dimension of RNN hidden states')
+tf.app.flags.DEFINE_integer('hidden_dim', 128, 'dimension of RNN hidden states')
+# tf.app.flags.DEFINE_integer('emb_dim', 128, 'dimension of word embeddings')
+tf.app.flags.DEFINE_integer('emb_dim', 64, 'dimension of word embeddings')
 tf.app.flags.DEFINE_integer('batch_size', 16, 'minibatch size')
-tf.app.flags.DEFINE_integer('max_enc_steps', 400, 'max timesteps of encoder (max source text tokens)')
-tf.app.flags.DEFINE_integer('max_dec_steps', 100, 'max timesteps of decoder (max summary tokens)')
+tf.app.flags.DEFINE_integer('max_enc_steps', 200, 'max timesteps of encoder (max source text tokens)')
+# default of max_enc_steps is 400.
+tf.app.flags.DEFINE_integer('max_dec_steps', 80, 'max timesteps of decoder (max summary tokens)')
+# default of max_dec_steps is 100
 tf.app.flags.DEFINE_integer('beam_size', 4, 'beam size for beam search decoding.')
 tf.app.flags.DEFINE_integer('min_dec_steps', 35,
                             'Minimum sequence length of generated summary. Applies only for beam search decoding mode')
